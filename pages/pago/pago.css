@@ -1,0 +1,33 @@
+.pago {
+  width: 100%;
+  padding: 45px 65px;
+  font-family: "Inter", sans-serif;
+}
+
+.pago__container-card {
+  width: 100%;
+  display: flex;
+
+  img {
+    max-width: 385px;
+    width: 100%;
+    height: auto;
+    margin-right: 35px;
+  }
+
+  h2 {
+    font-size: 65px;
+    margin-bottom: 15px;
+  }
+
+  p,
+  h4 {
+    font-size: 32px;
+    font-weight: 400;
+  }
+
+  h3 {
+    font-size: 48px;
+    margin-bottom: 15px;
+  }
+}
