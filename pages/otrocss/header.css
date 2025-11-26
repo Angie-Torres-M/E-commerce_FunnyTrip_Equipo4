@@ -1,4 +1,8 @@
-
+/* ===========================
+   VARIABLES GLOBALES DEL TEMA
+   Aquí se definen las fuentes y colores
+   que usará todo el sitio FunOnTrip.
+=========================== */
 html{
     --fontTitle:"Montserrat", sans-serif; 
     --fontText: "Nunito Sans", sans-serif;
@@ -7,6 +11,31 @@ html{
     --secondaryColor: #5DC1B9;
     --bottonColor: #FF8360;
 }
+
+
+/* ===========================
+   LOGO FUNONTRIP — Más grande y estilizado
+=========================== */
+
+.brand-logo {
+    font-size: 1.2rem;        /* tamaño más grande */
+    font-weight: 600;         /* más grueso */
+    letter-spacing: 0.5px;    /* un toque más elegante */
+    font-family: var(--fontTitle);
+    color: #000 !important;
+}
+
+.brand-logo:hover {
+    color: var(--secondaryColor) !important;
+    transition: 0.2s ease-in-out;
+    cursor: pointer;
+}
+
+
+/* ===========================
+   ESTILOS GENERALES DE ENLACES
+   Controlan color y comportamiento del hover
+=========================== */
 a {
     color: #000 !important;
     text-decoration: none !important;
@@ -17,3 +46,70 @@ a:hover {
     color: var(--secondaryColor)!important;
 }
 
+
+/* ===========================
+   NAVBAR — Estilo de enlaces principales
+   Aumenta tamaño, grosor y espacio entre opciones
+=========================== */
+
+.navbar-nav .nav-link {
+    font-size: 1.15rem;       /* tamaño más grande */
+    font-weight: 600;         /* un poco más grueso */
+    padding: 0.6rem 1rem;     /* más aire */
+    font-family: var(--fontTitle);
+    color: #000 !important;
+}
+
+.navbar-nav .nav-link:hover {
+    color: var(--secondaryColor) !important;
+    transition: 0.2s ease-in-out;
+}
+
+.navbar-nav .nav-item {
+    margin: 0 4px;            /* pequeño espaciado entre elementos */
+}
+
+
+/* ===========================
+   LÍNEA DE SEPARACIÓN BAJO EL HEADER
+   Una línea amarilla fija que aparece justo
+   debajo del header como detalle visual.
+=========================== */
+.header-separador {
+    width: 100%;
+    height: 2px;
+    background-color: #FFD275;
+    position: fixed;
+    top: 85px;
+    z-index: 999;
+    box-shadow: 0 2px 3px rgba(0,0,0,0.1);
+}
+
+/* ===========================
+   HEADER: VERSIONES STICKY Y FIXED
+   .header → se pega arriba solo al hacer scroll
+   .header-fijo → permanece fijo siempre
+=========================== */
+.header {
+    position: sticky;
+    top: 0;
+    z-index: 999;
+    background: white;
+}
+
+.header-fijo {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+    background-color: #ffffff;
+}
+
+/* ===========================
+   ESPACIADO DEL BODY
+   Evita que el contenido se esconda
+   debajo del header fijo.
+=========================== */
+body {
+    padding-top: 80px;
+}
