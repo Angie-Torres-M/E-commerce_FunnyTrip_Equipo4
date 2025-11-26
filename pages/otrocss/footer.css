@@ -11,6 +11,17 @@ html {
   display: flex;
 }
 
+.logo-link {
+    text-decoration: none !important;
+    color: #000 !important;
+    font-family: var(--fontTitle);
+}
+
+.logo-link:hover {
+    color: var(--secondaryColor) !important;
+    transition: 0.2s ease-in-out;
+}
+
 a {
   color: #000 !important;
   text-decoration: none !important;
