@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Contacto - FunOnTrip</title>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Inter:wght@400;600;800&family=Mona+Sans:wght@300;700;900&family=Source+Sans+3:wght@300;700;900&display=swap"
+      rel="stylesheet"
+    />
+    <!-- Font Awesome -->
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+      rel="stylesheet"
+    />
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/jpg" href="./images/funOnLog.jpg" />
+
+    <!-- ESTILOS GENERALES DEL PROYECTO -->
+    <link rel="stylesheet" href="./pages/otrocss/style.css" />
+  </head>
+
+  <body>
+    <!-- Header -->
+    <div id="site-header"></div>
+
+    <!-- MAIN con diseño RESPONSIVO -->
+    <section class="contacto">
+      <div class="contacto__container">
+        <h2 class="contacto__title">Contáctanos para tu próxima aventura</h2>
+
+        <!-- =============== FORMULARIO ADAPTADO =============== -->
+        <div>
+          <form id="form-contacto" class="contacto__form">
+            <label for="nombre">
+              Nombre
+              <input type="text" placeholder="Tu nombre" required id="nombre" />
+              <small id="error-nombre" class="text-danger"></small>
+            </label>
+
+            <label for="correo">
+              Email
+              <input type="email" placeholder="Tu email" required id="correo" />
+              <small id="error-correo" class="text-danger"></small>
+            </label>
+
+            <label for="telefono">
+              Número
+              <input
+                type="number"
+                placeholder="Tu número"
+                required
+                id="telefono"
+              />
+              <small id="error-telefono" class="text-danger"></small>
+            </label>
+
+            <label for="mensaje">
+              Mensaje
+              <textarea placeholder="Mensaje" required id="mensaje"></textarea>
+              <small id="error-mensaje" class="text-danger"></small>
+            </label>
+
+            <!-- Estado del envío -->
+            <div id="estado-envio"></div>
+
+            <!-- Botón con ID -->
+            <button id="btn-enviar">Enviar</button>
+          </form>
+
+          <!-- INFO DE CONTACTO -->
+          <div class="contacto__container-sections">
+            <div class="contacto__container-info">
+              <img
+                src="./images/istockphoto-1193451471-612x612 1.svg"
+                alt=""
+                class="contacto__icon"
+              />
+              <div>
+                <h2>Dirección</h2>
+                <p>Av. de la Luna 123 Mérida, México</p>
+              </div>
+            </div>
+
+            <div class="contacto__container-info">
+              <img
+                src="./images/phone-icon-telephone-icon-symbol-for-app-and-messenger-vector 1.svg"
+                alt=""
+                class="contacto__icon"
+              />
+              <div>
+                <h2>Teléfono</h2>
+                <p>+52 55 1234 5678</p>
+              </div>
+            </div>
+
+            <div class="contacto__container-info">
+              <img
+                src="./images/email-icon-sign-symbol-logo-vector 1.svg"
+                alt=""
+                class="contacto__icon"
+              />
+              <div>
+                <h2>Correo electrónico</h2>
+                <p>contacto@funontrip.com</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Imagen -->
+      <div class="contacto__container">
+        <img src="./images/contacto/pareja-playa.png" alt="" />
+      </div>
+    </section>
+    <!-- Footer -->
+    <div id="site-footer"></div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- EmailJS SDK -->
+    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+
+    <!-- INCLUDES DEL PROYECTO (Header + Footer) -->
+    <script src="./scripts/main.js"></script>
+
+    <!-- Lógica de validación + envío -->
+    <script src="./scripts/contacto.js"></script>
+  </body>
+</html>
