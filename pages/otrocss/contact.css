@@ -178,8 +178,13 @@
   }
 
   .contacto__container-info {
+    height: 90px;
     div > p {
       text-align: center;
     }
+  }
+
+  .contacto__container-sections {
+    height: 380px;
   }
 }
