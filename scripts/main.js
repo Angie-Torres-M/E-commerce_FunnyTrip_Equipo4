@@ -35,3 +35,22 @@ document.addEventListener("DOMContentLoaded", async () => {
     initTeamCards();
   }
 });
+
+  // Si la URL tiene un hash (ej: #equipo)
+  window.addEventListener("load", () => {
+    const hash = window.location.hash;
+    if (hash) {
+      const seccion = document.querySelector(hash);
+      if (seccion) {
+        const NAV_OFFSET = 100; // altura aprox de tu navbar en px
+
+        setTimeout(() => {
+          const top = seccion.getBoundingClientRect().top + window.pageYOffset - NAV_OFFSET;
+          window.scrollTo({
+            top: top,
+            behavior: "smooth"
+          });
+        }, 150);
+      }
+    }
+  });

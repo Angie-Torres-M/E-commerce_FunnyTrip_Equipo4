@@ -4,6 +4,14 @@
   --gray-dark: #2c2c2c;
 }
 
+body {
+    
+    padding-top: 80px; 
+}
+main {
+    padding-top: 50px; /* ajústalo según te guste */
+} 
+
 /* Reset básico */
 * {
   margin: 0;
@@ -13,6 +21,7 @@
 
 body {
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  
 }
 
 /* Hero Section */

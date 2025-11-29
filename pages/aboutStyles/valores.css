@@ -31,6 +31,18 @@
   font-weight: 600;
   margin-bottom: 18px;
 }
+.valor-check {
+  font-size: 1.2rem;
+  font-weight: 500;
+  color: #333;
+}
+
+.icono-check {
+  color: #f4c54277;        /* Verde turquesa FunOnTrip */
+  font-size: 1.4rem;
+  margin-right: 10px;
+}
+
 
 @media (max-width: 768px) {
   .valores-box {

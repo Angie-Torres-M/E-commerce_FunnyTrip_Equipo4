@@ -52,3 +52,13 @@
   font-weight: 600;
   cursor: pointer;
 }
+a.btn.btn-pago {
+  background-color: #fec74a;
+  border-color: #fec74a;
+  color: #000;
+}
+
+a.btn.btn-pago:hover {
+  background-color: #e3b043;
+  border-color: #e3b043;
+}
