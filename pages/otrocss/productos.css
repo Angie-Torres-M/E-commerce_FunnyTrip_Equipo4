@@ -128,3 +128,16 @@
   text-align: center;
   font-size: 1rem;
 }
+
+/* ==== BOTONES DE FILTRO AMARILLOS ==== */
+.btn-filtro {
+  border: 1px solid #FEC74A;
+  color: #000000;
+  font-weight: 600;
+}
+
+.btn-filtro:hover,
+.btn-filtro.active {
+  background-color: #FEC74A;
+  color: #1a1a1a; /* Negro para contraste */
+}
