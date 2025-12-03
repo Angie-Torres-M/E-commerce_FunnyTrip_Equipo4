@@ -28,7 +28,7 @@ document.addEventListener("DOMContentLoaded", async () => {
   await includeHTML("#site-teamCards", "./sections/about/teamCards.html");
 
   // 3) Secciones de productos
-  await includeHTML("#site-productos_y_promociones", "./sections/productos/productos_y_promociones.html");
+  await includeHTML("#site-home", "./sections/home.html");
 
   // 👇 aquí ya existen las cards en el DOM
   if (typeof initTeamCards === "function") {
@@ -54,3 +54,47 @@ document.addEventListener("DOMContentLoaded", async () => {
       }
     }
   });
+
+
+// Heder dinamico
+function initHeader() {
+    const header = document.querySelector(".header-dinamico");
+    if (header) {
+        let lastScroll = 0;
+
+        window.addEventListener("scroll", () => {
+            const currentScroll = window.pageYOffset || document.documentElement.scrollTop;
+
+            if (currentScroll > lastScroll && currentScroll > 80) {
+                header.classList.add("header-hidden");
+            } else {
+                header.classList.remove("header-hidden");
+            }
+
+            lastScroll = currentScroll <= 0 ? 0 : currentScroll;
+        });
+    }
+
+    const toggle = document.getElementById("navToggle");
+    const menu = document.getElementById("navMenu");
+
+    if (toggle && menu) {
+        toggle.addEventListener("click", () => {
+            menu.classList.toggle("active");
+        });
+    }
+}
+
+document.addEventListener("DOMContentLoaded", () => {
+    const headerContainer = document.getElementById("site-header");
+    if (!headerContainer) return;
+
+    fetch("./header.html")
+        .then(res => res.text())
+        .then(html => {
+            headerContainer.innerHTML = html;
+            initHeader();    // Muy importante: aquí ya existen navToggle y navMenu
+        })
+        .catch(err => console.error("Error al cargar el header:", err));
+});
+
