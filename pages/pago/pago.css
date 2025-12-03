@@ -93,6 +93,7 @@ input::-webkit-inner-spin-button {
 
 /* Quitar flechas en Firefox */
 input[type="number"] {
+  appearance: textfield;
   -moz-appearance: textfield;
 }
 
